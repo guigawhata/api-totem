@@ -1,0 +1,9 @@
+node_modules
+dist/
+.env
+.docker/postgres/data/*
+!.docker/postgres/data/.gitkeep
+.docker/node-red/data/*
+!.docker/node-red/data/.gitkeep
+tmp/*
+!tmp/.gitkeep

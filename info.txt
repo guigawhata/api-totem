@@ -1,0 +1,10 @@
+user: de4389db-578b-4689-88f6-88271113dda8
+totem: 501ca674-ce78-4702-851a-3fbba2955830
+QR-CODE-READER: 7d8764ff-4c7f-42a8-bd05-73cea184f2ad
+AROMA-DISPENSER-ID: eb13529c-41a9-4bfe-8132-15f7cc58713f
+
+
+a803f8ef-4351-43ba-97af-6e8e0c705e92    perfume quadrado
+5d39cce4-c95e-4024-8f11-bb96d24f4d09    litros
+5b14fb89-be63-4c8d-8890-1f169bfa5644    kaiak
+c447c1c8-e83f-4c69-94eb-547380c9c7ce    maquiagem
