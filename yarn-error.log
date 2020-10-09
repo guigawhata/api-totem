@@ -1,5 +1,5 @@
 Arguments: 
-  /home/floyd/.nvm/versions/node/v12.18.3/bin/node /home/floyd/.nvm/versions/node/v12.18.3/bin/yarn add @types/socket.io~
+  /home/floyd/.nvm/versions/node/v12.18.3/bin/node /home/floyd/.nvm/versions/node/v12.18.3/bin/yarn add tsnode
 
 PATH: 
   /home/floyd/.zinit/polaris/sbin:/home/floyd/.zinit/polaris/bin:/home/floyd/.nvm/versions/node/v12.18.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/floyd/Android/Sdk/emulator:/home/floyd/Android/Sdk/tools:/home/floyd/Android/Sdk/tools/bin:/home/floyd/Android/Sdk/platform-tools:/home/floyd/android-studio/bin:/home/floyd/Android/Sdk/emulator:/home/floyd/Android/Sdk/tools:/home/floyd/Android/Sdk/tools/bin:/home/floyd/Android/Sdk/platform-tools:/home/floyd/android-studio/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fsocket.io~: Not found
+  Error: https://registry.yarnpkg.com/tsnode: Not found
       at Request.params.callback [as _callback] (/home/floyd/.nvm/versions/node/v12.18.3/lib/node_modules/yarn/lib/cli.js:66987:18)
       at Request.self.callback (/home/floyd/.nvm/versions/node/v12.18.3/lib/node_modules/yarn/lib/cli.js:140748:22)
       at Request.emit (events.js:315:20)
@@ -35,13 +35,14 @@ npm manifest:
     "scripts": {
       "build": "tsc",
       "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
+      "production:server": "ts-node dist/server.js",
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
     },
     "dependencies": {
-      "@types/multer": "^1.4.4",
       "axios": "^0.20.0",
       "bcryptjs": "^2.4.3",
       "cors": "^2.8.5",
+      "dotenv": "^8.2.0",
       "express": "^4.17.1",
       "express-async-errors": "^3.1.1",
       "mqtt": "^4.2.1",
@@ -52,6 +53,8 @@ npm manifest:
       "typeorm": "^0.2.28"
     },
     "devDependencies": {
+      "@types/cors": "^2.8.7",
+      "@types/multer": "^1.4.4",
       "@types/bcryptjs": "^2.4.2",
       "@types/express": "^4.17.8",
       "@types/socket.io": "^2.1.11",
@@ -158,6 +161,13 @@ Lockfile:
     integrity sha512-2+FrkXY4zllzTNfJth7jOqEHC+enpLeGslEhpnTAkg21GkRrWV4SsAtqchtT4YS9/nODBU2/ZfsBY2X4J/dX7A==
     dependencies:
       "@types/node" "*"
+  
+  "@types/cors@^2.8.7":
+    version "2.8.7"
+    resolved "https://registry.yarnpkg.com/@types/cors/-/cors-2.8.7.tgz#ab2f47f1cba93bce27dfd3639b006cc0e5600889"
+    integrity sha512-sOdDRU3oRS7LBNTIqwDkPJyq0lpHYcbMTt0TrjzsXbk/e37hcLTH6eZX7CdbDeN0yJJvzw9hFBZkbtCSbk/jAQ==
+    dependencies:
+      "@types/express" "*"
   
   "@types/engine.io@*":
     version "3.1.4"
