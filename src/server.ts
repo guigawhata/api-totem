@@ -6,6 +6,7 @@ import { createConnection } from 'typeorm';
 import 'express-async-errors';
 
 import http from 'http';
+import cors from 'cors';
 import ormconfig from './utils/ormconfig';
 import { connectToSocketServer, socketServer } from './utils/sockets';
 
@@ -20,6 +21,7 @@ async function startServer() {
   await createConnection(ormconfig);
 
   const app = express();
+  app.use(cors());
   app.use(express.json());
   app.use('/files', express.static(uploadConfig.directory));
 
