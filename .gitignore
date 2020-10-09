@@ -7,3 +7,4 @@ dist/
 !.docker/node-red/data/.gitkeep
 tmp/*
 !tmp/.gitkeep
+info.txt
