@@ -7,7 +7,6 @@ import 'express-async-errors';
 
 import http from 'http';
 import cors from 'cors';
-import ormconfig from './utils/ormconfig';
 import { connectToSocketServer, socketServer } from './utils/sockets';
 
 import AppError from './errors/AppError';
@@ -19,8 +18,7 @@ import RefreshPINTotemService from './services/RefreshPINTotemService';
 
 async function startServer() {
   const app = express();
-
-  await createConnection(ormconfig);
+  await createConnection();
 
   app.use(cors());
   app.use(express.json());
