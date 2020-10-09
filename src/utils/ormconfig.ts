@@ -7,10 +7,10 @@ const ORMConfig: ConnectionOptions = {
   username: process.env.TYPEORM_USERNAME,
   password: process.env.TYPEORM_PASSWORD,
   database: process.env.TYPEORM_DATABASE,
-  entities: ['../models/*.ts' || process.env.TYPEORM_ENTITIES],
-  migrations: ['../database/migrations/*.ts' || process.env.TYPEORM_MIGRATIONS],
+  entities: ['../models/*.ts'],
+  migrations: ['../database/migrations/*.ts'],
   cli: {
-    migrationsDir: process.env.TYPEORM_MIGRATIONS_DIR,
+    migrationsDir: '../database/migrations',
   },
 };
 

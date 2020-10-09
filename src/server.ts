@@ -18,9 +18,10 @@ import uploadConfig from './config/upload';
 import RefreshPINTotemService from './services/RefreshPINTotemService';
 
 async function startServer() {
+  const app = express();
+
   await createConnection(ormconfig);
 
-  const app = express();
   app.use(cors());
   app.use(express.json());
   app.use('/files', express.static(uploadConfig.directory));
@@ -55,7 +56,7 @@ async function startServer() {
     setTimeout(refreshPIN, 10 * 1000);
   }
 
-  refreshPIN();
+  // refreshPIN();
 
   server.listen(process.env.PORT || 3333, () => {
     // eslint-disable-next-line no-console
