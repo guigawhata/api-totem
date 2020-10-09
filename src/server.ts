@@ -54,7 +54,7 @@ async function startServer() {
     setTimeout(refreshPIN, 10 * 1000);
   }
 
-  // refreshPIN();
+  refreshPIN();
 
   server.listen(process.env.PORT || 3333, () => {
     // eslint-disable-next-line no-console
