@@ -1,5 +1,5 @@
-web: yarn production:server
+release: yarn production:server
 
-web: yarn typeorm schema:drop
+release: yarn typeorm schema:drop
 
 web: yarn typeorm migration:run
